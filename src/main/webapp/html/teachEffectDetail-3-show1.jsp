@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,8 +39,8 @@
                 <article class="mainContent">
                     <header class="contentNav">
                         <nav class="nav">
-                            <a href="index.html">首页</a>·
-                            <a href="teachEffectDetail-3.jsp">教学效果</a>·
+                            <a href="/html/index.jsp">首页</a>·
+                           <a href="<c:url value='/Expert_EvaluationServlet?method=getOneContent&number=0&type=2&n=1'/>">教学效果</a>·
                             <a href="#">教师自我评价</a>
                         </nav>
                         <h1>教师自我评价</h1>
@@ -53,8 +53,8 @@
             </div>
             <div class="column_3" style="width: 550px;">
 
-                <h3>侯爱民自我评价</h3>
-                <p style="text-align: left;">从2007-2008学年第1学期开始，至2018-2019学年第1学期止，总共为12届的学生讲授《面向对象分析与设计(UML)》、《软件需求分析与设计》课程。累计学生人数1300，累计学时700。</p>
+                <h3>${evalution.evalutionTitle}</h3>
+                <p style="text-align: left;">${evalution.content}</p>
                 <br>
             </div>
         </div>
